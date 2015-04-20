@@ -22,6 +22,7 @@ group :default do
   gem 'progress_bar'
   gem 'rails'
   gem 'sass-rails'
+  gem 'simple_form'
   gem 'uglifier'
 end
 
