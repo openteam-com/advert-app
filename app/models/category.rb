@@ -1,6 +1,8 @@
 class Category < ActiveRecord::Base
   has_ancestry
 
+  has_many :adverts
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
@@ -8,3 +10,15 @@ class Category < ActiveRecord::Base
     text.to_slug.normalize! :transliterations => :russian
   end
 end
+
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :integer          not null, primary key
+#  title      :string(255)
+#  slug       :string(255)
+#  ancestry   :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#

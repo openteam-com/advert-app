@@ -16,3 +16,15 @@ RSpec.describe Category, type: :model do
     expect(yml).to eq(true)
   end
 end
+
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :integer          not null, primary key
+#  title      :string(255)
+#  slug       :string(255)
+#  ancestry   :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
