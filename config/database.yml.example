@@ -1,0 +1,15 @@
+common: &common
+  host: host_name
+  adapter: adapter_name
+
+development:
+  <<: *common
+  database: db_name
+
+test:
+  <<: *common
+  database: db_name
+
+production:
+  <<: *common
+  database: db_name
