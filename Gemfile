@@ -18,12 +18,15 @@ group :default do
   gem 'omniauth-twitter'
   gem 'omniauth-vkontakte',         '~> 1.3'
   gem 'omniauth-yandex'
+  gem 'paperclip'
+  gem 'paperclip-elvfs'
   gem 'pg'
   gem 'progress_bar'
   gem 'rails'
   gem 'sass-rails'
   gem 'simple_form'
   gem 'uglifier'
+  gem 'jquery-fileupload-rails'
 end
 
 group :development, :test do

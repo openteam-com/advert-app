@@ -2,6 +2,8 @@ class Advert < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
 
+  has_many :gallery_images
+
   validates_presence_of :title, :description, :phone, :advert_type, :price, :category
 
   extend Enumerize
@@ -22,6 +24,7 @@ end
 #
 #  id          :integer          not null, primary key
 #  title       :string
+#  slug        :string
 #  description :text
 #  phone       :string
 #  advert_type :string

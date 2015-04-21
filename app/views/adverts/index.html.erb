@@ -1,4 +1,5 @@
 <%= link_to 'add', new_advert_path %>
+
 <ul class="adverts_wrapper">
   <% @adverts.each do |advert| %>
     <li><%= link_to advert.title, advert_path(advert) %></li>

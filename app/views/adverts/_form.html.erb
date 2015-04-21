@@ -1,9 +1,10 @@
-<%= simple_form_for @advert do |f| %>
+<%= simple_form_for @advert, html: { class: ['js-file-upload'] } do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.association :category, collection: Category.all, disabled: Category.roots.map(&:id) %>
   <%= f.input :advert_type %>
   <%= f.input :price %>
   <%= f.input :phone %>
+  <%= f.association :gallery_images, as: :file, multiple: true %>
   <%= f.submit %>
 <% end %>
