@@ -1,8 +1,9 @@
 <%= simple_form_for @advert do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
-  <%= f.association :category, collection: Category.all, disabled: Category.category_values %>
+  <%= f.association :category, collection: Category.all, disabled: Category.roots.map(&:id) %>
   <%= f.input :advert_type %>
   <%= f.input :price %>
+  <%= f.input :phone %>
   <%= f.submit %>
 <% end %>

@@ -17,20 +17,22 @@ ActiveRecord::Schema.define(version: 20150420105540) do
   enable_extension "plpgsql"
 
   create_table "adverts", force: :cascade do |t|
-    t.string   "title",       limit: 255
+    t.string   "title"
+    t.string   "slug"
     t.text     "description"
-    t.string   "phone",       limit: 255
-    t.string   "advert_type", limit: 255
-    t.string   "price",       limit: 255
+    t.string   "phone"
+    t.string   "advert_type"
+    t.string   "price"
     t.integer  "category_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.string   "slug",       limit: 255
-    t.string   "ancestry",   limit: 255
+    t.string   "title"
+    t.string   "slug"
+    t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,10 +40,10 @@ ActiveRecord::Schema.define(version: 20150420105540) do
   add_index "categories", ["ancestry"], name: "index_categories_on_ancestry", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",           limit: 255, null: false
-    t.integer  "sluggable_id",               null: false
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
     t.string   "sluggable_type", limit: 50
-    t.string   "scope",          limit: 255
+    t.string   "scope"
     t.datetime "created_at"
   end
 

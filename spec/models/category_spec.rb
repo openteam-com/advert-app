@@ -22,9 +22,9 @@ end
 # Table name: categories
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)
-#  slug       :string(255)
-#  ancestry   :string(255)
+#  title      :string
+#  slug       :string
+#  ancestry   :string
 #  created_at :datetime
 #  updated_at :datetime
 #
