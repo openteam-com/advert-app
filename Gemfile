@@ -27,7 +27,8 @@ group :default do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'hirb'
   gem 'annotate'
+  gem 'brakeman'
+  gem 'hirb'
+  gem 'rspec-rails'
 end

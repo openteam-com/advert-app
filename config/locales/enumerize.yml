@@ -1,0 +1,10 @@
+ru:
+  enumerize:
+    advert:
+      advert_type:
+        buy:  Купить
+        sell: Продать
+        exchange: Обменять
+        rent: Сдать в аренду
+        offer: Предложить
+        seek: Искать

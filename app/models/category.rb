@@ -9,6 +9,15 @@ class Category < ActiveRecord::Base
   def normalize_friendly_id(text)
     text.to_slug.normalize! :transliterations => :russian
   end
+
+  def self.category_values
+    array = []
+    roots.each do |root|
+      array << root.id
+    end
+
+    array
+  end
 end
 
 # == Schema Information
